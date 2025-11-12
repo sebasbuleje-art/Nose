@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎧</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- LOGIN -->
+  <div id="login" class="card">
+    <h2>🎧</h2>
+    <input type="text" id="usuario" placeholder="Usuario">
+    <input type="password" id="contraseña" placeholder="Contraseña">
+    <input type="password" id="claveMaestra" placeholder="Clave maestra">
+    <button id="loginBtn">Entrar</button>
+    <p id="loginError"></p>
+  </div>
 
+  <!-- CHAT -->
+  <div id="chat" class="hidden">
+    <div class="top-bar">
+      <h2>🎧</h2>
+      <button id="modoBtn">🌙 Modo oscuro</button>
+    </div>
+
+    <div id="messages"></div>
+
+    <form id="chat-form">
+      <input id="msg" autocomplete="off" placeholder="Escribe un mensaje...">
+      <button>Enviar</button>
+    </form>
+
+    <form id="file-form">
+      <input type="file" id="file">
+      <button>📎 Subir archivo</button>
+    </form>
+  </div>
+
+  <audio id="notif" src="notification.mp3"></audio>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
